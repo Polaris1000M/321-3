@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="3-31-26" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>3-31-26</title>
+    <p>Motivation for Lebesgue Theory, Introduction to the Outer Measure.</p>
+
     <example xml:id="ex-riemann-inconsistencies">
         <title>Inconsistencies of Riemann Integration</title>
         <p>
