@@ -1,9 +1,9 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "shorttitlelowercase-2",
+  "id": "landing-2",
   "level": "1",
-  "url": "shorttitlelowercase-2.html",
+  "url": "landing-2.html",
   "type": "Front Matter",
   "number": "",
   "title": "Front Matter",
