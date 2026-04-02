@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="3-31-26" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>3-31-26</title>
+    <example xml:id="ex-riemann-inconsistencies">
+        <title>Inconsistencies of Riemann Integration</title>
+        <p>
+            Assume <m>f: [0, 3] \rightarrow \R</m> and <me>f(x) = \begin{cases}
+                3 \quad &amp; x \in [0, 1] \backslash \Q\\
+                7 \quad &amp; x \in [1, 3] \backslash \Q\\
+                1 \quad &amp; x \in [0, 3] \cap \Q
+            \end{cases}</me>. <m>\int_{0}^{3} f(x)dx</m> is undefined since <m>f</m> is discontinuous at every point.
+        </p>
+        <p>
+            What is the "average" value of <m>f</m>? <me>\frac{1}{3} \cdot \int_{0}^{3} f(x)dx = \frac{1}{3} (3 \cdot 1 + 7 \cdot 2 + 1 \cdot 0) = \frac{17}{3}</me>.
+        </p>
+        <p>
+            Let <m>\Q \cap [0, 3] = \{q_1, q_2, \cdots\}</m>, let <m>Q_n = \{q_1, \ldots, q_n\}</m>, and let <me>f_n(x) = \begin{cases}
+                3 \quad &amp; x \in [0, 1] \backslash \Q_n\\
+                7 \quad &amp; x \in [1, 3] \backslash \Q_n\\
+                1 \quad &amp; x \in Q_n
+            \end{cases}</me>. Then, <m>\int_{0}^{3} f_n(x)dx</m> exists and is equal to 17. Furthermore, <m>f_n \rightarrow f</m> pointwise in a "controlled" way (since <m>f</m> and <m>f_n</m> are bounded).
+        </p>
+    </example>
+
+    <claim xml:id="clm-lebesgue-motivation">
+        <title>Motivation for Lebesgue Theory</title>
+        <p>
+            Riemann integration is "bad." It does not hold in the limit and it does not respect the idea of an "average" value. This motivates Lebesgue theory.
+        </p>
+    </claim>
+
+    <definition xml:id="def-measure">
+        <title>Measure</title>
+        <p>
+            Let <m>\mu: \{\textrm{subsets of } \R\} \rightarrow \R</m> be a <em>measure</em> of subsets of <m>\R</m>. Then, <m>\mu</m> satisfies
+            <ol marker="(1)">
+                <li><em>Nonnegativity</em>. <m>\mu(E) \in [0, \infty)</m>.</li>
+                <li><em>Monotonicity</em>. If <m>A \subseteq B</m>, <m>\mu(A) \le \mu(B)</m>.</li>
+                <li><em>Normalization</em>. <m>\mu([0, 1]) = 1</m>.</li>
+                <li><em>Translation invariance</em>. Assume <m>A + t = \{x + t \mid x \in A\}</m>. Then, <m>\mu(A + t) = \mu(A)</m>.</li>
+                <li><em>Countable additivity</em>. Let <m>A_1, A_2, \ldots \subseteq \R</m> be pairwise disjoint. Then, <m>\mu \left(\bigcup_{i = 1}^\infty\right)= \sum_{i = 1}^{\infty} \mu(A_i)</m></li>
+            </ol>
+        </p>
+    </definition>
+
+    <remark xml:id="rmk-nonexistence-of-measure">
+        <title>Nonexistence of a Measure</title>
+        <p>
+            We want a measure <m>\mu</m> to define a reasonable notion of the "size" of subsets <m>E \subseteq \R</m>. However, no such <m>\mu</m> exists! This is mainly due to the fifth property. The solution is to restrict the domain of <m>\mu</m> from certain subsets of <m>\R</m>.
+        </p>
+    </remark>
+
+    <definition xml:id="def-outer-measure">
+        <title>Lebesgue Outer Measure</title>
+        <p>
+            Let <m>U = (a, b)</m> be an open interval. Define <m>\textrm{len } U = b - a</m>. Given <m>E \subseteq \R</m>, let <m>\mathcal U = \{U_i\}</m> be a cover of <m>E</m> by open intervals.
+        </p>
+        <p>
+            By the Second Axiom of Countability, we can cover <m>E</m> by countably many intervals. Let <m>\mathcal U(E) = \{\textrm{covers of } E \textrm{ by countably many open intervals}\}</m>.
+        </p>
+        <p>
+            Then, <me>\mu^*(E) = \inf \left\{\sum_{\{U_n\} \in \mathcal U(E)} \textrm{len}(U_n)\right\}.</me>
+        </p>
+        <p>
+            Note that <m>\mu^*</m> is <em>not</em> a measure.
+        </p>
+    </definition>
+
+    <example xml:id="ex-outer-measure">
+        <title>Outer Measure Examples</title>
+        <p>
+            Let <m>A = (a, b)</m>. Then, <m>\mu^*(A) = b - a</m>. Since <m>A \subseteq (a, b)</m>, we have <m>\mu^*(A) \le b - a</m>.
+        </p>
+        <p>
+            Let <m>A = \{7\}</m> be a singleton. Then, <m>A \subseteq (7 - \varepsilon, 7 + \varepsilon)</m> so <m>\mu^*(A) \le 2\varepsilon</m>. Since <m>\varepsilon</m> is arbitrary, <m>\mu^*(A) = 0</m>.
+        </p>
+        <p>
+            Assume <m>A = \Q</m>. Let <m>\Q = \{q_1, q_2, \ldots\}</m>. For <m>n \in \N</m>, let <m>U_n = \left(q_n - \frac{\varepsilon}{2^n}, q_n + \frac{\varepsilon}{2^n}\right)</m>. Clearly, <m>\Q \subseteq \bigcup_{i = 1}^\infty U_i</m>, so <m>\{U_i\}_{i = 1}^\infty</m> covers <m>\Q</m> by countably many open intervals. Then, <me>\sum_{i = 1}^{\infty} \textrm{len } U_i = \sum_{i = 1}^{\infty} \frac{\varepsilon}{n^{i - 1}} = \varepsilon \sum_{k = 0}^{\infty} \frac{1}{2^k} = 2\varepsilon.</me> Thus, we have <m>\mu^*(A) = \mu^*(\Q) = 0</m>.
+        </p>
+    </example>
+
+    <corollary xml:id="cor-countable-sets">
+        <p>Countable sets have outer measure 0.</p>
+    </corollary>
+
+    <definition xml:id="def-null-set">
+        <title>Null Set</title>
+        <p>
+            <m>E \subseteq \R</m> is a null set if <m>\mu^*(E) = 0</m>.
+        </p>
+        <p>
+            Null sets are always measurable.
+        </p>
+    </definition>
+
+    <example xml:id="ex-middle-cantor-set">
+        <title>Middle <m>\frac{1}{3}</m> Cantor set</title>
+        <p>
+            The middle <m>\frac{1}{3}</m> Cantor set is a null set but it is uncountable.
+        </p>
+    </example>
+
+    <proposition xml:id="prop-outer-measure-monotonicity">
+        <title>Monotonicity of the Outer Measure</title>
+        <p>
+            Given <m>A \subseteq B</m>, we have <m>\mu^*(A) \le \mu^*(B)</m>.
+        </p>
+        <proof>
+            <p>
+                Suppose <m>A \subseteq B</m>. Then, let <m>\{U_n\} \in \mathcal U(B)</m> be a cover of <m>B</m> by countably many open intervals. It follows that <m>\{U_n\}</m> is also a cover of <m>A</m>. Since <m>\mathcal U(B) \subseteq \mathcal U(A)</m> <me>\inf \sum_{\{U_n\} \in \mathcal U(A)} \textrm{len } U_n \le \inf \sum_{\{U_n\} \in \mathcal U(B)} \textrm{len } U_n</me> by the properties of the infimum.
+            </p>
+        </proof>
+    </proposition>
+</section>
+
