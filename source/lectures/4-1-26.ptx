@@ -49,7 +49,7 @@
         </p>
         <proof>
             <p>
-                <m>[a + \varepsilon, b - \varepsilon] \subset I \subset [a, b]</m>. By monotonicity, <m>b - a - 2\varepsilon \le \mu^*(I) \le b - a</m>. It follows that <m>mu^*(I) = b - a</m>.
+                <m>[a + \varepsilon, b - \varepsilon] \subset I \subset [a, b]</m>. By monotonicity, <m>b - a - 2\varepsilon \le \mu^*(I) \le b - a</m>. It follows that <m>\mu^*(I) = b - a</m>.
             </p>
         </proof>
     </proposition>
