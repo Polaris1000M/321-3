@@ -127,8 +127,8 @@
         </p>
     </definition>
 
-    <remark>
+    <remark xml:id="rmk-sigma-algebras-intersections">
         <title>Intersections and <m>\sigma</m>-Algebras</title>
-        <p>If <m>\mathcal A</m> is a <m>\sigma</m>-algebra on <m>X</m>, then for any <m>\{A_i\}_{i = 1}^\infty \subseteq \mathcal A</m>, <m>\bigcap_{i = 1}^\infty A_i \in \mathcal A</m>. This follows from De Morgan's Laws as <m>\bigcap_{i = 1}^\infty A_i = \left(\bigcup_{i = 1}^\infty A_i^\mathsf{c}\right)^\mathsf{c}</m></p>
+        <p>If <m>\mathcal A</m> is a <m>\sigma</m>-algebra on <m>X</m>, then for any <m>\{A_i\}_{i = 1}^\infty \subseteq \mathcal A</m>, <m>\bigcap_{i = 1}^\infty A_i \in \mathcal A</m>. This follows from De Morgan's Laws as <m>\bigcap_{i = 1}^\infty A_i = \left(\bigcup_{i = 1}^\infty A_i^\mathsf{c}\right)^\mathsf{c}</m>.</p>
     </remark>
 </section>
