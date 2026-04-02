@@ -1,4 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="4-1-26" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>4-1-26</title>
+    <title>4-1-26</title>
+    <proposition xml:id="prop-outer-measure-normalized-on-compact-intervals">
+        <title>Normalization of Outer Measure on Compact Intervals</title>
+        <p>
+            Let <m>I = [a, b]</m> be a compact interval. Then, <m>\mu^*(I) = b - a</m>.
+        </p>
+        <proof>
+            <p>
+                Firstly, <m>\mu^*(I) \le b - a</m>. <m>I \subset (a - \varepsilon, b + \varepsilon)</m> so <m>\{(a - \varepsilon, b + \varepsilon)\} \in \mathcal U(I)</m>. Thus, <me>\mu^*(I) \le \inf_{\varepsilon > 0} \{\textrm{len}(a - \varepsilon, b + \varepsilon)\} = \inf_{\varepsilon > 0} \{b - a + 2\varepsilon\} = b - a.</me>
+            </p>
+            <p>
+                We now show that <m>\mu^*(I) \ge b - a</m>. Let <m>\mathcal U' \in \mathcal U(I)</m> be a cover of <m>I</m> by countably many open intervals. By compactness, there is a finite <m>\mathcal U \subseteq \mathcal U'</m> such that <m>I \subset \bigcup_{U \in \mathcal U} U</m>.
+            </p>
+            <p>
+                Since <m>\mathcal U</m> is a cover of <m>I</m>, there exists <m>J_1 = (a_1, b_1) \in \mathcal U</m> with <m>a \in J_1</m>. If <m>b_1 \ge b</m>, then <me>\sum_{U \in \mathcal U} \textrm{len } U \ge \textrm{len } J_1 = b_1 - a_1 \ge b - a.</me> Otherwise, <m>b_1 &lt; b</m> and since <m>a \in J_1</m>, we have <m>b_1 \in I</m>. Then, pick <m>J_2 = (a_2, b_2)</m> such that <m>b_1 \in J_2</m>. Again, either <m>b_2 \ge b</m> or <m>b_2 \in I</m>.
+            </p>
+            <p>
+                Suppose we have <m>J_1 = (a_1, b_2), J_2 = (a_2, b_2), \ldots, J_{n - 1} = (a_{n - 1}, b_{n - 1})</m> such that 
+                <ol>
+                    <li><m>a \in J_1</m>.</li>
+                    <li><m>b_i \in J_{i + 1}</m> for <m>1 \le i \le n - 2</m>, i.e., <m>a_{i + 1} &lt; b_i &lt; b_{i + 1}</m>.</li>
+                </ol>
+            </p>
+            <p>
+                If <m>b_{n - 1} \le b</m>, then there is <m>J_n \in \mathcal U</m>, <m>J_n = (a_n, b_n)</m> and <m>b_{n - 1} \in J_n</m>. Since <m>\mathcal U</m> is finite, this process must terminate and we can assume that <m>b_n > b</m>. Then
+                <md>
+                    <mrow>\sum_{U \in \mathcal U} \textrm{len } U &amp;\ge \sum_{i = 1}^{n} \textrm{len } J_i</mrow>
+                    <mrow>&amp; = \sum_{i = 1}^{n} (b_i - a_i)</mrow>
+                    <mrow>&amp; = b_n + \sum_{i = 1}^{n - 1} (b_i - a_{i + 1}) - a_1</mrow>
+                    <mrow>&amp; \ge b_n - a_1</mrow>
+                    <mrow>&amp; \ge b - a.</mrow>
+                </md>
+            </p>
+            <p>
+                Since <m>\mathcal U \subseteq \mathcal U'</m>, it follows that <m>\sum_{U \in \mathcal U} \textrm{len } U \le \sum_{U \in \mathcal U'} \textrm{len } U</m>. Consequently, for every <m>\mathcal U' \in \mathcal U(I)</m>, <m>\sum_{U \in \mathcal U'} \textrm{len } U \ge b - a</m>. As <m>\mu^*(I) = \inf_{\mathcal U' \in \mathcal U(I)} \sum_{U \in \mathcal U'} \textrm{len } U</m>, it follows that <m>\mu^*(I) \ge b - a</m>.
+            </p>
+            <p>
+                We have shown that <m>\mu^*(I) \le b - a</m> and <m>\mu^*(I) \ge b - a</m>. Therefore, <m>\mu^*(I) = b - a</m>, as required.
+            </p>
+        </proof>
+    </proposition>
+
+    <proposition xml:id="prop-outer-measure-normalized-on-bounded-intervals">
+        <title>Normalization of Outer Measure on Bounded Intervals</title>
+        <p>
+            Let <m>I \subset \R</m> be a bounded interval with endpoints <m>a &lt; b</m>. Then, <m>\mu^*(I) = b - a</m>.
+        </p>
+        <proof>
+            <p>
+                <m>[a + \varepsilon, b - \varepsilon] \subset I \subset [a, b]</m>. By monotonicity, <m>b - a - 2\varepsilon \le \mu^*(I) \le b - a</m>. It follows that <m>mu^*(I) = b - a</m>.
+            </p>
+        </proof>
+    </proposition>
+
+    <proposition xml:id="prop-outer-measure-on-unbounded-intervals">
+        <title>Outer Measure on Unbounded Intervals</title>
+        <p>
+            If <m>I</m> is an unbounded interval, then <m>\mu^*(I) = \infty</m>.
+        </p>
+        <proof>
+            <p>
+                Without loss of generality, let <m>I = (a, \infty)</m>. <m>\left[a + \varepsilon, \frac{1}{\varepsilon}\right] \subset I</m>. As <m>\varepsilon \rightarrow 0</m> we have <m>\mu^*(I) \rightarrow \infty</m>, as required.
+            </p>
+        </proof>
+    </proposition>
+
+    <proposition>
+        <title>Translation Invariance</title>
+        <p>
+            Let <m>E \subset \R</m> and for <m>t \in \R</m> write <m>E + t = \{x + t \mid x \in E\}</m>. Then, <m>\mu^*(E) = \mu^*(E + t)</m>.
+        </p>
+        <proof>
+            <p>
+                It is true that <m>\{U_i\} \in \mathcal U(E)</m> if and only if <m>\{U_i + t\} \in \mathcal U(E + t)</m>. Since <m>\textrm{len } U_i = \textrm{len} (U_i + t)</m>, it follows that <m>\sum U_i = \sum \textrm{len} (U_i + t)</m> and <m>\mu^*(E) = \mu^*(E + t)</m>.
+            </p>
+        </proof>
+    </proposition>
+
+    <proposition xml:id="prop-outer-measure-countable-subadditivity">
+        <title>Subadditivity of Outer Measure</title>
+        <p>
+            Let <m>A_1, A_2, \ldots \subset \R</m>. Then, <m>\mu^*\left(\bigcup_{i = 1}^\infty A_i\right) \le \sum_{i = 1}^{\infty} \mu^*(A_i)</m>.
+        </p>
+        <proof>
+            <p>
+                For each <m>i \in \N</m>, pick <m>\{U_j\}_i \in \mathcal U(A_i)</m> with <m>\sum \textrm{len } U_j \le \mu^*(A_i) + \frac{\varepsilon}{2^i}</m>. Such a <m>\{U_j\}_i</m> exists since <m>\mu^*(A_i)</m> is an infimum.
+            </p>
+            <p>
+                Since <m>\bigcup_{U_j \in \{U_j\}_i} U_j</m> is a cover of <m>A_i</m>, it follows that <m>\bigcup_{i = 1}^\infty \{U_j\}_i</m> is a cover of <m>\bigcup A_i</m> by open intervals. Therefore, <me>\sum_{i = 1}^\infty \sum_{U_j \in \{U_j\}_i} \textrm{len } U_j \le \sum_{i = 1}^{\infty} \left(\mu^*(A_i) + \frac{\varepsilon}{2^i}\right) = \sum_{i = 1}^\infty \mu^*(A_i) + \varepsilon.</me> As <m>\mu^*\left(\bigcup_{i = 1}^\infty A_i\right) \le \sum_{i = 1}^\infty \sum_{U_j \in \{U_j\}_i} \textrm{len } U_j</m>, it follows that <m>\mu^*\left(\bigcup_{i = 1}^\infty A_i\right) \le \sum_{i = 1}^{\infty} \mu^*(A_i)</m>, as required.
+            </p>
+        </proof>
+    </proposition>
+
+    <remark xml:id="rmk-sets-without-outer-measure">
+        <title>Sets Without Outer Measure</title>
+        <p>
+            There exists <m>B \subset [0, 1]</m> such that <m>\mu^*(B) + \mu^*([0, 1] \backslash B) > 1</m>. Non-measurable sets exist and <m>\mu^*</m> might fail to be finitely additive on disjoint sets.
+        </p>
+    </remark>
+
+    <proposition xml:id="prop-outer-measure-outer-regularity">
+        <title>Outer Regularity of Outer Measure</title>
+        <p>
+            Let <m>A \subset \R</m> with <m>\mu^*(A) &lt; \infty</m>. Then, there is an open set <m>U</m> with <m>A \subset U</m> and <m>\mu^*(A) \le \mu^*(U) \le \mu^*(A) + \varepsilon</m>.
+        </p>
+        <proof>
+            <p>
+                Let <m>\varepsilon > 0</m>. Take some <m>\{U_j\} \in \mathcal U(A)</m> with <m>\sum \textrm{len } U_j \le \mu^*(A) + \varepsilon</m>. Set <m>U = \bigcup U_j</m>. Then, <m>A \subseteq U</m> and <me>\mu^*(U) \le \sum \textrm{len } U_j \le \mu^*(A) + \varepsilon.</me>
+            </p>
+        </proof>
+    </proposition>
+
+    <definition xml:id="def-sigma-algebras">
+        <title><m>\sigma</m>-Algebras</title>
+        <p>
+            A subset <m>\mathcal A \subseteq \mathcal P(X)</m> is a <em><m>\sigma</m>-algebra</em> if 
+            <ol>
+                <li><m>X \in \mathcal A</m>.</li>
+                <li><m>\mathcal A</m> is closed under complements, i.e., if <m>E \in \mathcal A</m>, then <m>E^\mathsf{c} = X \backslash E \in \mathcal A</m>.</li>
+                <li><m>\mathcal A</m> is closed under countable unions. If <m>\{A_i\}_{i = 1}^\infty \subseteq A</m>, then <m>\bigcup_{i = 1}^\infty A_i \in \mathcal A</m>.</li>
+            </ol>
+        </p>
+        <p>
+            Note that <m>\sigma</m> means "countable" and <m>\mathcal P(X)</m> denotes the power set of <m>X</m>.
+        </p>
+    </definition>
+
+    <remark>
+        <title>Intersections and <m>\sigma</m>-Algebras</title>
+        <p>If <m>\mathcal A</m> is a <m>\sigma</m>-algebra on <m>X</m>, then for any <m>\{A_i\}_{i = 1}^\infty \subseteq \mathcal A</m>, <m>\bigcap_{i = 1}^\infty A_i \in \mathcal A</m>. This follows from De Morgan's Laws as <m>\bigcap_{i = 1}^\infty A_i = \left(\bigcup_{i = 1}^\infty A_i^\mathsf{c}\right)^\mathsf{c}</m></p>
+    </remark>
 </section>

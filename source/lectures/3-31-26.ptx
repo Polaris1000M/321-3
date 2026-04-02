@@ -33,7 +33,7 @@
         <title>Measure</title>
         <p>
             Let <m>\mu: \{\textrm{subsets of } \R\} \rightarrow \R</m> be a <em>measure</em> of subsets of <m>\R</m>. Then, <m>\mu</m> satisfies
-            <ol marker="(1)">
+            <ol>
                 <li><em>Nonnegativity</em>. <m>\mu(E) \in [0, \infty)</m>.</li>
                 <li><em>Monotonicity</em>. If <m>A \subseteq B</m>, <m>\mu(A) \le \mu(B)</m>.</li>
                 <li><em>Normalization</em>. <m>\mu([0, 1]) = 1</m>.</li>
@@ -75,12 +75,12 @@
             Let <m>A = \{7\}</m> be a singleton. Then, <m>A \subseteq (7 - \varepsilon, 7 + \varepsilon)</m> so <m>\mu^*(A) \le 2\varepsilon</m>. Since <m>\varepsilon</m> is arbitrary, <m>\mu^*(A) = 0</m>.
         </p>
         <p>
-            Assume <m>A = \Q</m>. Let <m>\Q = \{q_1, q_2, \ldots\}</m>. For <m>n \in \N</m>, let <m>U_n = \left(q_n - \frac{\varepsilon}{2^n}, q_n + \frac{\varepsilon}{2^n}\right)</m>. Clearly, <m>\Q \subseteq \bigcup_{i = 1}^\infty U_i</m>, so <m>\{U_i\}_{i = 1}^\infty</m> covers <m>\Q</m> by countably many open intervals. Then, <me>\sum_{i = 1}^{\infty} \textrm{len } U_i = \sum_{i = 1}^{\infty} \frac{\varepsilon}{n^{i - 1}} = \varepsilon \sum_{k = 0}^{\infty} \frac{1}{2^k} = 2\varepsilon.</me> Thus, we have <m>\mu^*(A) = \mu^*(\Q) = 0</m>.
+            Assume <m>A = \Q</m>. Let <m>\Q = \{q_1, q_2, \ldots\}</m>. For <m>n \in \N</m>, let <m>U_n = \left(q_n - \frac{\varepsilon}{2^n}, q_n + \frac{\varepsilon}{2^n}\right)</m>. Clearly, <m>\Q \subseteq \bigcup_{n = 1}^\infty U_n</m>, so <m>\{U_n\}_{n = 1}^\infty</m> covers <m>\Q</m> by countably many open intervals. Then, <me>\sum_{n = 1}^{\infty} \textrm{len } U_n = \sum_{n = 1}^{\infty} \frac{\varepsilon}{2^{n - 1}} = \varepsilon \sum_{k = 0}^{\infty} \frac{1}{2^k} = 2\varepsilon.</me> Thus, we have <m>\mu^*(A) = \mu^*(\Q) = 0</m>.
         </p>
     </example>
 
     <corollary xml:id="cor-countable-sets">
-        <p>Countable sets have outer measure 0.</p>
+        <p>Countable sets have outer measure <m>0</m>.</p>
     </corollary>
 
     <definition xml:id="def-null-set">
