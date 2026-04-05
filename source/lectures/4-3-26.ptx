@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <section xml:id="4-3-26" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>4-3-26</title>
+    <p>Generated <m>\sigma</m>-Algebras, Borel Sets, Carathéodory Criterion.</p>
+
     <example>
         <p>Let <m>\mathcal F \subseteq \mathcal P(\R)</m> such that <me>\mathcal F = \{A \subseteq \R \mid \textrm{either } A \textrm{ open or } A \textrm{ closed}\}</me>.</p>
         <p>Since <m>\mathcal F</m> is not closed under countable unions (or even finite unions) <m>\mathcal F</m> is not a <m>\sigma</m>-algebra.</p>
