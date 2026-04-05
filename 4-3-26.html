@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>4-3-26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.1';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.f6b4a33441cf25ab.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.720279673ae692d7.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="chen-real-analysis" class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="landing.html"><span class="title">MATH 321-3</span></a></h1>
+<p class="byline">Author M. Chen</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="4-1-26.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="landing.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth1 focused" data-preexpanded-levels="0" data-max-levels="1"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="landing-2.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="3-31-26.html" class="internal"><span class="codenumber">1</span> <span class="title">3-31-26</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="4-1-26.html" class="internal"><span class="codenumber">2</span> <span class="title">4-1-26</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="4-3-26.html" class="internal"><span class="codenumber">3</span> <span class="title">4-3-26</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="4-3-26"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">4-3-26</span>
+</h2>
+<article class="example example-like" id="4-3-26-2"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="4-3-26-2-1">
+<div class="para">Let <span class="process-math">\(\mathcal F \subseteq \mathcal P(\R)\)</span> such that</div>
+<div class="displaymath process-math" id="4-3-26-2-1-2">
+\begin{equation*}
+\mathcal F = \{A \subseteq \R \mid \textrm{either } A \textrm{ open or } A \textrm{ closed}\}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#4-3-26-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="4-3-26-2-2">Since <span class="process-math">\(\mathcal F\)</span> is not closed under countable unions (or even finite unions) <span class="process-math">\(\mathcal F\)</span> is not a <span class="process-math">\(\sigma\)</span>-algebra.<div class="autopermalink" data-description="Paragraph"><a href="#4-3-26-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.1"><a href="#4-3-26-2" title="Copy heading and permalink for Example 3.1" aria-label="Copy heading and permalink for Example 3.1">🔗</a></div></article><article class="definition definition-like" id="def-gen-sigma-alg"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\sigma\)</span>-Algebra Generated by <span class="process-math">\(\mathcal F\)</span>.</span>
+</h3>
+<div class="para" id="def-gen-sigma-alg-2">Let <span class="process-math">\(\mathcal F \subseteq \mathcal P(X)\)</span> be a collection of subsets of <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(\sigma(\mathcal F)\)</span> be the smallest <span class="process-math">\(\sigma\)</span>-algebra on <span class="process-math">\(X\)</span> containing <span class="process-math">\(\mathcal F\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-gen-sigma-alg-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="def-gen-sigma-alg-3">Call <span class="process-math">\(\sigma(\mathcal F)\)</span> the <span class="process-math">\(\sigma\)</span>-algebra <em class="emphasis">generated</em> by <span class="process-math">\(\mathcal F\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-gen-sigma-alg-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2: \sigma-Algebra Generated by \mathcal F"><a href="#def-gen-sigma-alg" title="Copy heading and permalink for Definition 3.2: \sigma-Algebra Generated by \mathcal F" aria-label="Copy heading and permalink for Definition 3.2: \sigma-Algebra Generated by \mathcal F">🔗</a></div></article><article class="definition definition-like" id="def-borel"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Borel <span class="process-math">\(\sigma\)</span>-Algebra.</span>
+</h3>
+<div class="para" id="def-borel-2">Let <span class="process-math">\(\mathcal B = \sigma(\{\textrm{open sets}\}) = \sigma(\{\textrm{closed sets}\})\text{.}\)</span> Then, <span class="process-math">\(\mathcal B\)</span> is called the <em class="emphasis">Borel <span class="process-math">\(\sigma\)</span>-algebra</em>.<div class="autopermalink" data-description="Paragraph"><a href="#def-borel-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="def-borel-3">The elements of <span class="process-math">\(\mathcal B\)</span> are called <em class="emphasis">Borel sets</em>.<div class="autopermalink" data-description="Paragraph"><a href="#def-borel-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.3: Borel \sigma-Algebra"><a href="#def-borel" title="Copy heading and permalink for Definition 3.3: Borel \sigma-Algebra" aria-label="Copy heading and permalink for Definition 3.3: Borel \sigma-Algebra">🔗</a></div></article><article class="example example-like" id="4-3-26-5"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="4-3-26-5-1">Let <span class="process-math">\(\mathcal F = \{[1, 2 - \frac{1}{n}] \mid n \in \N\}\)</span> be a collection of closed sets. <span class="process-math">\(\bigcup_{n = 1}^\infty [1, 2 - \frac{1}{n}] = [1, 2)\text{.}\)</span> Consequently, <span class="process-math">\(\mathcal F\)</span> is not closed under countable unions and is not a <span class="process-math">\(\sigma\)</span>-algebra.<div class="autopermalink" data-description="Paragraph"><a href="#4-3-26-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.4"><a href="#4-3-26-5" title="Copy heading and permalink for Example 3.4" aria-label="Copy heading and permalink for Example 3.4">🔗</a></div></article><article class="example example-like" id="4-3-26-6"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="4-3-26-6-1">
+<div class="para">Let <span class="process-math">\(X = \{1, 2, 3, 4, 5\}\text{.}\)</span> Let <span class="process-math">\(\mathcal F = \{\{1, 3\}\}\text{.}\)</span> Then,</div>
+<div class="displaymath process-math" id="4-3-26-6-1-3">
+\begin{equation*}
+\sigma(\mathcal F) = \{\emptyset, X, \{1, 3\}, \{2, 4, 5\}\}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#4-3-26-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.5"><a href="#4-3-26-6" title="Copy heading and permalink for Example 3.5" aria-label="Copy heading and permalink for Example 3.5">🔗</a></div></article><article class="definition definition-like" id="def-borel-sig-alg-msr-sets"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Borel <span class="process-math">\(\sigma\)</span>-Algebra of Lebesgue Measurable Sets.</span>
+</h3>
+<div class="para" id="def-borel-sig-alg-msr-sets-2">Let <span class="process-math">\(\mathcal M\)</span> be the <span class="process-math">\(\sigma\)</span>-algebra on <span class="process-math">\(\R\)</span> generated by Borel sets and null sets.<div class="autopermalink" data-description="Paragraph"><a href="#def-borel-sig-alg-msr-sets-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="def-borel-sig-alg-msr-sets-3">Later we will see that <span class="process-math">\(\mathcal M\)</span> is the <span class="process-math">\(\sigma\)</span>-algebra of Lebesgue measurable sets.<div class="autopermalink" data-description="Paragraph"><a href="#def-borel-sig-alg-msr-sets-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="def-borel-sig-alg-msr-sets-4">We sometimes call <span class="process-math">\(\mathcal M\)</span> the <em class="emphasis">completion</em> of <span class="process-math">\(\mathcal B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-borel-sig-alg-msr-sets-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.6: Borel \sigma-Algebra of Lebesgue Measurable Sets"><a href="#def-borel-sig-alg-msr-sets" title="Copy heading and permalink for Definition 3.6: Borel \sigma-Algebra of Lebesgue Measurable Sets" aria-label="Copy heading and permalink for Definition 3.6: Borel \sigma-Algebra of Lebesgue Measurable Sets">🔗</a></div></article><article class="definition definition-like" id="def-caratheodory-crit"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Carathéodory Criterion.</span>
+</h3>
+<div class="para logical" id="def-caratheodory-crit-2">
+<div class="para">We say <span class="process-math">\(A \subseteq \R\)</span> is in <span class="process-math">\(\mathcal M_0\)</span> if for any subset <span class="process-math">\(X \subseteq \R\)</span>
+</div>
+<div class="displaymath process-math" id="def-caratheodory-crit-2-4">
+\begin{equation*}
+\mu^*(X) = \mu^*(X \cap A) + \mu^*(X \cap A^{\mathsf c})\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-caratheodory-crit-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="def-caratheodory-crit-3">
+<span class="process-math">\(\mathcal M_0\)</span> is equivalent to <span class="process-math">\(\mathcal M\)</span> and is also the <span class="process-math">\(\sigma\)</span>-algebra of Lebesgue measurable sets.<div class="autopermalink" data-description="Paragraph"><a href="#def-caratheodory-crit-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.7: Carathéodory Criterion"><a href="#def-caratheodory-crit" title="Copy heading and permalink for Definition 3.7: Carathéodory Criterion" aria-label="Copy heading and permalink for Definition 3.7: Carathéodory Criterion">🔗</a></div></article><article class="remark remark-like" id="4-3-26-9"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="4-3-26-9-1">We always have <span class="process-math">\(\mu^*(X) \le \mu^*(X \cap A) + \mu^*(X \cap A^{\mathsf c})\)</span> by countable subadditivity. Consequently, to show that <span class="process-math">\(A \in \mathcal M_0\text{,}\)</span> it suffices to prove <span class="process-math">\(\mu^*(X) \ge \mu^*(X \cap A) + \mu^*(X \cap A^{\mathsf c})\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#4-3-26-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="4-3-26-9-2">We will also see that Borel sets and null sets satisfy the Carathéodory Criterion.<div class="autopermalink" data-description="Paragraph"><a href="#4-3-26-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 3.8"><a href="#4-3-26-9" title="Copy heading and permalink for Remark 3.8" aria-label="Copy heading and permalink for Remark 3.8">🔗</a></div></article><article class="proposition theorem-like" id="prop-msr-null-sets"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Measurability of Null Sets.</span>
+</h3>
+<div class="para" id="prop-msr-null-sets-2">Null sets are measurable.<div class="autopermalink" data-description="Paragraph"><a href="#prop-msr-null-sets-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.9: Measurability of Null Sets"><a href="#prop-msr-null-sets" title="Copy heading and permalink for Proposition 3.9: Measurability of Null Sets" aria-label="Copy heading and permalink for Proposition 3.9: Measurability of Null Sets">🔗</a></div></article><details id="prop-msr-null-sets-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-msr-null-sets-3-1">
+<div class="para">Let <span class="process-math">\(A \subset \R\)</span> be a null set. Take any <span class="process-math">\(A \subseteq \R\text{.}\)</span> Then,</div>
+<div class="displaymath process-math" id="prop-msr-null-sets-3-1-3">
+\begin{equation*}
+\mu^*(X \cap A) + \mu^*(X \cap A^{\mathsf c}) \underset{\textrm{M.}}{\le} + \mu^*(A) + \mu^*(X \cap A^{\mathsf c}) \underset{\textrm{M.}}{\le} 0 + \mu^*(X)\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop-msr-null-sets-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.9.1"><a href="#prop-msr-null-sets-3" title="Copy heading and permalink for Proof 3.9.1" aria-label="Copy heading and permalink for Proof 3.9.1">🔗</a></div></article></details><article class="observation remark-like" id="obs-M0-first-two-sigma-alg"><h3 class="heading">
+<span class="type">Observation</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\mathcal M_0\)</span> Satifies First Two Properties of <span class="process-math">\(\sigma\)</span>-Algebras.</span>
+</h3>
+<div class="para" id="obs-M0-first-two-sigma-alg-2">
+<span class="process-math">\(A \in \mathcal M_0\)</span> if and only if <span class="process-math">\(A^{\mathsf c} \in \mathcal M_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#obs-M0-first-two-sigma-alg-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="obs-M0-first-two-sigma-alg-3">
+<span class="process-math">\(\emptyset \in \mathcal M_0\)</span> so <span class="process-math">\(\R \in \mathcal M_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#obs-M0-first-two-sigma-alg-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="obs-M0-first-two-sigma-alg-4">Thus, <span class="process-math">\(\mathcal M_0\)</span> satisfies the first two properties of <span class="process-math">\(\sigma\)</span>-algebras outlined in <a href="4-1-26.html#def-sigma-algebras" class="xref" data-knowl="./knowl/xref/def-sigma-algebras.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.8: \sigma-Algebras">Definition 2.8</a>. It remains to show that <span class="process-math">\(\mathcal M_0\)</span> is closed under countable unions.<div class="autopermalink" data-description="Paragraph"><a href="#obs-M0-first-two-sigma-alg-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Observation 3.10: \mathcal M_0 Satifies First Two Properties of \sigma-Algebras"><a href="#obs-M0-first-two-sigma-alg" title="Copy heading and permalink for Observation 3.10: \mathcal M_0 Satifies First Two Properties of \sigma-Algebras" aria-label="Copy heading and permalink for Observation 3.10: \mathcal M_0 Satifies First Two Properties of \sigma-Algebras">🔗</a></div></article><article class="proposition theorem-like" id="prop-M0-finite-unions"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finite Unions of <span class="process-math">\(\mathcal M_0\)</span>.</span>
+</h3>
+<div class="para" id="prop-M0-finite-unions-2">Let <span class="process-math">\(A, B \in \mathcal M_0\text{.}\)</span> Then, <span class="process-math">\(A \cup B \in \mathcal M_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop-M0-finite-unions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.11: Finite Unions of \mathcal M_0"><a href="#prop-M0-finite-unions" title="Copy heading and permalink for Proposition 3.11: Finite Unions of \mathcal M_0" aria-label="Copy heading and permalink for Proposition 3.11: Finite Unions of \mathcal M_0">🔗</a></div></article><details id="prop-M0-finite-unions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="prop-M0-finite-unions-3-1">
+<div class="para">Note that</div>
+<div class="displaymath process-math" id="prop-M0-finite-unions-3-1-1">
+\begin{equation*}
+X \cap (A \cup B) = (X \cap B) \cup (X \cap A \cap B^{\mathsf c})\text{.}
+\end{equation*}
+</div>
+<div class="para">Additionally,</div>
+<div class="displaymath process-math" id="prop-M0-finite-unions-3-1-2">
+\begin{align}
+\mu^*(X \cap B^{\mathsf c}) \amp = \mu^*((X \cap B^{\mathsf c}) \cap A) + \mu^*((X \cap B^{\mathsf c}) \cap A^{\mathsf c})\notag\\
+\amp = \mu^*(X \cap B^{\mathsf c} \cap A) + \mu^*(X \cap (A \cup B)^{\mathsf c})\tag{3.1}
+\end{align}
+</div>
+<div class="para">where the first equality holds from <span class="process-math">\(A \in \mathcal M_0\)</span> and the second from <span class="process-math">\(B^{\mathsf c} \cap A^{\mathsf c} = (A \cup B)^{\mathsf c}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop-M0-finite-unions-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="prop-M0-finite-unions-3-2">
+<div class="para">Consequently,</div>
+<div class="displaymath process-math" id="prop-M0-finite-unions-3-2-1">
+\begin{align*}
+\mu^*(X \cap (A \cup B)) + \mu^*(X \cap (A \cup B)^{\mathsf c}) \amp \underset{\textrm{S.A.}}{\le} \mu^*(X \cap B) + \mu^*(X \cap A \cap B^{\mathsf c})\\
+\amp \phantom{\underset{\textrm{S.A.}}{\le}} + \mu^*(X \cap (A \cup B)^{\mathsf c})\\
+\amp= \mu^*(A \cap B) + \mu^*(X \cap B^{\mathsf c})\\
+\amp = \mu^*(X)\text{.}
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\mu^*(X \cap (A \cup B)) + \mu^*(X \cap (A \cup B)^{\mathsf c}) \le \mu^*(X)\text{,}\)</span> as required.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop-M0-finite-unions-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.11.1"><a href="#prop-M0-finite-unions-3" title="Copy heading and permalink for Proof 3.11.1" aria-label="Copy heading and permalink for Proof 3.11.1">🔗</a></div></article></details><article class="proposition theorem-like" id="prop-disjoint-M0"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Disjoint Elements of <span class="process-math">\(\mathcal M_0\)</span>.</span>
+</h3>
+<div class="para logical" id="prop-disjoint-M0-2">
+<div class="para">Let <span class="process-math">\(A, B \in \mathcal M_0\)</span> be disjoint. Then, for any <span class="process-math">\(X \subseteq \R\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="prop-disjoint-M0-2-3">
+\begin{equation*}
+\mu^*(X \cap (A \cup B)) = \mu^*(X \cap A) + \mu^*(X \cap B)\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop-disjoint-M0-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.12: Disjoint Elements of \mathcal M_0"><a href="#prop-disjoint-M0" title="Copy heading and permalink for Proposition 3.12: Disjoint Elements of \mathcal M_0" aria-label="Copy heading and permalink for Proposition 3.12: Disjoint Elements of \mathcal M_0">🔗</a></div></article><details id="prop-disjoint-M0-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="displaymath process-math" id="prop-disjoint-M0-3-1">
+\begin{align*}
+\mu^*(X \cap (A \cup B)) \amp = \mu^*(X \cap (A \cup B) \cap A) + \mu^*(X \cap (A \cup B) \cap A^{\mathsf c})\\
+\amp = \mu^*(X \cap A) + \mu^*(X \cap B)\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Proof 3.12.1"><a href="#prop-disjoint-M0-3" title="Copy heading and permalink for Proof 3.12.1" aria-label="Copy heading and permalink for Proof 3.12.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor-finite-add-disjoint-M0"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Finite Additivity of Disjoint Elements of <span class="process-math">\(\mathcal M_0\)</span>.</span>
+</h3>
+<div class="para" id="cor-finite-add-disjoint-M0-2">Let <span class="process-math">\(X = \R\text{.}\)</span> If <span class="process-math">\(A, B \in \mathcal M_0\text{,}\)</span> <span class="process-math">\(A \cap B = \emptyset\text{,}\)</span> we have <span class="process-math">\(\mu^*(A \cup B) = \mu^*(A) + \mu^*(B)\)</span> from <a href="4-3-26.html#prop-disjoint-M0" class="xref" data-knowl="./knowl/xref/prop-disjoint-M0.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.12: Disjoint Elements of \mathcal M_0">Proposition 3.12</a> and <a href="4-3-26.html#def-caratheodory-crit" class="xref" data-knowl="./knowl/xref/def-caratheodory-crit.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 3.7: Carathéodory Criterion">Definition 3.7</a>. Thus, for measurable sets <span class="process-math">\(A, B \in \mathcal M_0\)</span> that are disjoint, we have finite additivity.<div class="autopermalink" data-description="Paragraph"><a href="#cor-finite-add-disjoint-M0-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 3.13: Finite Additivity of Disjoint Elements of \mathcal M_0"><a href="#cor-finite-add-disjoint-M0" title="Copy heading and permalink for Corollary 3.13: Finite Additivity of Disjoint Elements of \mathcal M_0" aria-label="Copy heading and permalink for Corollary 3.13: Finite Additivity of Disjoint Elements of \mathcal M_0">🔗</a></div></article><article class="proposition theorem-like" id="prop-M0-closed-countable-union"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Closedness of <span class="process-math">\(\mathcal M_0\)</span> Under Countable Unions.</span>
+</h3>
+<div class="para" id="prop-M0-closed-countable-union-2">Let <span class="process-math">\(\{A_i\}_{i = 1}^\infty \subseteq \mathcal M_0\text{.}\)</span> Then, <span class="process-math">\(\bigcup_{i = 1}^\infty A_i \in \mathcal M_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop-M0-closed-countable-union-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 3.14: Closedness of \mathcal M_0 Under Countable Unions"><a href="#prop-M0-closed-countable-union" title="Copy heading and permalink for Proposition 3.14: Closedness of \mathcal M_0 Under Countable Unions" aria-label="Copy heading and permalink for Proposition 3.14: Closedness of \mathcal M_0 Under Countable Unions">🔗</a></div></article><details id="prop-M0-closed-countable-union-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="prop-M0-closed-countable-union-3-1">Let <span class="process-math">\(E_k = \bigcup_{j = 1}^k A_j\text{,}\)</span> let <span class="process-math">\(B_k = A_k \backslash E_{k - 1} = A_k \cap (E_{k - 1})^{\mathsf c}\)</span> for <span class="process-math">\(k &gt; 1\text{,}\)</span> and assume <span class="process-math">\(A_1 = E_1 = B_1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#prop-M0-closed-countable-union-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="prop-M0-closed-countable-union-3-2">Firstly, <span class="process-math">\(E_\infty = \bigcup_{i = 1}^\infty A_i\text{.}\)</span> Then, <span class="process-math">\(E_\infty = \bigcup_{i = 1}^\infty B_i\)</span> as well. Finally, <span class="process-math">\(B_i \cap B_j = \emptyset\)</span> if <span class="process-math">\(i \ne j\text{,}\)</span> so the set of <span class="process-math">\(B_i\)</span> is pairwise disjoint.<div class="autopermalink" data-description="Paragraph"><a href="#prop-M0-closed-countable-union-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="prop-M0-closed-countable-union-3-3">
+<div class="para">Given <span class="process-math">\(X \subseteq \R\)</span> and <span class="process-math">\(N \in \N\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="prop-M0-closed-countable-union-3-3-3">
+\begin{align*}
+\mu^*(X) \amp = \mu^*(X \cap B_N) + \mu^*(X \cap E_N^{\mathsf c})\\
+\amp \underset{\textrm{M.}}{\ge} \mu^*(X \cap E_N) + \mu^*(X \cap E_\infty^{\mathsf c})\\
+\amp = \sum_{i = 1}^{N} \mu^*(X \cap B_i) + \mu^*(X \cap E_\infty^{\mathsf c})
+\end{align*}
+</div>
+<div class="para">where the final inequality holds from .</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop-M0-closed-countable-union-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="prop-M0-closed-countable-union-3-4">
+<div class="para">Since this holds for all <span class="process-math">\(N \in \N\text{,}\)</span> it follows that</div>
+<div class="displaymath process-math" id="prop-M0-closed-countable-union-3-4-2">
+\begin{align*}
+\mu^*(X) \amp \ge \sum_{i = 1}^{\infty} \mu^*(X \cap B_i) + \mu^*(X \cap E_\infty^{\mathsf c})\\
+\amp \underset{\textrm{S.A.}}{\ge} \mu^*\left(\bigcup_{i = 1}^\infty (X \cap B_i)\right) + \mu^*(X \cap E_\infty^{\mathsf c})\\
+\amp = \mu^*(X \cap E_\infty) + \mu^*(X \cap E_\infty^{\mathsf c})
+\end{align*}
+</div>
+<div class="para">so <span class="process-math">\(E_\infty\)</span> is measurable.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#prop-M0-closed-countable-union-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="prop-M0-closed-countable-union-3-5">As <span class="process-math">\(E_\infty = bigcup_{i = 1}^\infty A\text{,}\)</span> it follows that <span class="process-math">\(\bigcup_{i = 1}^\infty A \in \mathcal M_0\text{,}\)</span> as required.<div class="autopermalink" data-description="Paragraph"><a href="#prop-M0-closed-countable-union-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.14.1"><a href="#prop-M0-closed-countable-union-3" title="Copy heading and permalink for Proof 3.14.1" aria-label="Copy heading and permalink for Proof 3.14.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor-M0-sigma-alg"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(\mathcal M_0\)</span> is a <span class="process-math">\(\sigma\)</span>-Algebra.</span>
+</h3>
+<div class="para" id="cor-M0-sigma-alg-2">From <a href="4-3-26.html#obs-M0-first-two-sigma-alg" class="xref" data-knowl="./knowl/xref/obs-M0-first-two-sigma-alg.html" data-reveal-label="Reveal" data-close-label="Close" title="Observation 3.10: \mathcal M_0 Satifies First Two Properties of \sigma-Algebras">Observation 3.10</a> and <a href="4-3-26.html#prop-M0-closed-countable-union" class="xref" data-knowl="./knowl/xref/prop-M0-closed-countable-union.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.14: Closedness of \mathcal M_0 Under Countable Unions">Proposition 3.14</a>, <span class="process-math">\(\mathcal M_0\)</span> is a <span class="process-math">\(\sigma\)</span>-algebra.<div class="autopermalink" data-description="Paragraph"><a href="#cor-M0-sigma-alg-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 3.15: \mathcal M_0 is a \sigma-Algebra"><a href="#cor-M0-sigma-alg" title="Copy heading and permalink for Corollary 3.15: \mathcal M_0 is a \sigma-Algebra" aria-label="Copy heading and permalink for Corollary 3.15: \mathcal M_0 is a \sigma-Algebra">🔗</a></div></article><div class="autopermalink" data-description="Section 3: 4-3-26"><a href="#4-3-26" title="Copy heading and permalink for Section 3: 4-3-26" aria-label="Copy heading and permalink for Section 3: 4-3-26">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="4-1-26.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
