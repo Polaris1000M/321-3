@@ -341,6 +341,132 @@ var ptx_lunr_docs = [
   "number": "3.15",
   "title": "<span class=\"process-math\">\\(\\mathcal M_0\\)<\/span> is a <span class=\"process-math\">\\(\\sigma\\)<\/span>-Algebra.",
   "body": " is a -Algebra  From and , is a -algebra.  "
+},
+{
+  "id": "4-6-26",
+  "level": "1",
+  "url": "4-6-26.html",
+  "type": "Section",
+  "number": "4",
+  "title": "4-6-26",
+  "body": " 4-6-26  "
+},
+{
+  "id": "4-8-26",
+  "level": "1",
+  "url": "4-8-26.html",
+  "type": "Section",
+  "number": "5",
+  "title": "4-8-26",
+  "body": " 4-8-26   The measure on exists  There exists a unique set function satisfying  Nonnegativity.  Monotonicity.  Normalization.  Translation invariance.  Countable additivity.  Outer regularity. Given and , there is open with and .      Given , . The Legesgue measure is just the restriction of the outer measure to .    Inner regularity  Given and , there is a closed with and .   Let . By outer regularity, there is open with and . Let . Then since , and , so .     Continuity of measure   Given an increasing sequence , .  Given a descending sequence with , .     Let and let . Then, and for . Then, .   First note that is non-increasing and bounded below by so exists.  Let . Then, . Also, .  It follows that so due to disjointness and measurability. Thus, since , , and is finite.       For , .   is a disjoint union. The formula follows by finite additivity.     There is no set function satisfying all of the following:  Translation invariance.  Monotonicity.  Normalization.  Countable additivity. If is pairwise disjoint, then .      Vitali set  Given , say if . defines an equivalence relation on the real line and let . By the Axiom of Choice, for each equivalence class, pick a representative .  Then, is a Vitali set. Given , let .     If , for some , so .  if .     If exists, then .   . Thus, . Since , cannot be so .     If exists, then .   . . But, .  On the other hand, by translation invariance, .     Let .  Then, , . .   "
+},
+{
+  "id": "thm-existence-of-measure",
+  "level": "2",
+  "url": "4-8-26.html#thm-existence-of-measure",
+  "type": "Theorem",
+  "number": "5.1",
+  "title": "The measure on <span class=\"process-math\">\\(\\mathcal M\\)<\/span> exists.",
+  "body": " The measure on exists  There exists a unique set function satisfying  Nonnegativity.  Monotonicity.  Normalization.  Translation invariance.  Countable additivity.  Outer regularity. Given and , there is open with and .    "
+},
+{
+  "id": "4-8-26-3",
+  "level": "2",
+  "url": "4-8-26.html#4-8-26-3",
+  "type": "Remark",
+  "number": "5.2",
+  "title": "",
+  "body": " Given , . The Legesgue measure is just the restriction of the outer measure to .  "
+},
+{
+  "id": "prop-inner-regularity",
+  "level": "2",
+  "url": "4-8-26.html#prop-inner-regularity",
+  "type": "Proposition",
+  "number": "5.3",
+  "title": "Inner regularity.",
+  "body": " Inner regularity  Given and , there is a closed with and .   Let . By outer regularity, there is open with and . Let . Then since , and , so .   "
+},
+{
+  "id": "prop_measure-continuity",
+  "level": "2",
+  "url": "4-8-26.html#prop_measure-continuity",
+  "type": "Proposition",
+  "number": "5.4",
+  "title": "Continuity of measure.",
+  "body": " Continuity of measure   Given an increasing sequence , .  Given a descending sequence with , .     Let and let . Then, and for . Then, .   First note that is non-increasing and bounded below by so exists.  Let . Then, . Also, .  It follows that so due to disjointness and measurability. Thus, since , , and is finite.     "
+},
+{
+  "id": "4-8-26-6",
+  "level": "2",
+  "url": "4-8-26.html#4-8-26-6",
+  "type": "Proposition",
+  "number": "5.5",
+  "title": "",
+  "body": " For , .   is a disjoint union. The formula follows by finite additivity.   "
+},
+{
+  "id": "4-8-26-7",
+  "level": "2",
+  "url": "4-8-26.html#4-8-26-7",
+  "type": "Theorem",
+  "number": "5.6",
+  "title": "",
+  "body": " There is no set function satisfying all of the following:  Translation invariance.  Monotonicity.  Normalization.  Countable additivity. If is pairwise disjoint, then .    "
+},
+{
+  "id": "ex-vitali-set",
+  "level": "2",
+  "url": "4-8-26.html#ex-vitali-set",
+  "type": "Example",
+  "number": "5.7",
+  "title": "Vitali set.",
+  "body": " Vitali set  Given , say if . defines an equivalence relation on the real line and let . By the Axiom of Choice, for each equivalence class, pick a representative .  Then, is a Vitali set. Given , let .  "
+},
+{
+  "id": "4-8-26-9",
+  "level": "2",
+  "url": "4-8-26.html#4-8-26-9",
+  "type": "Observation",
+  "number": "5.8",
+  "title": "",
+  "body": "  If , for some , so .  if .   "
+},
+{
+  "id": "4-8-26-10",
+  "level": "2",
+  "url": "4-8-26.html#4-8-26-10",
+  "type": "Lemma",
+  "number": "5.9",
+  "title": "",
+  "body": " If exists, then .   . Thus, . Since , cannot be so .   "
+},
+{
+  "id": "4-8-26-11",
+  "level": "2",
+  "url": "4-8-26.html#4-8-26-11",
+  "type": "Lemma",
+  "number": "5.10",
+  "title": "",
+  "body": " If exists, then .   . . But, .  On the other hand, by translation invariance, .   "
+},
+{
+  "id": "4-8-26-12",
+  "level": "2",
+  "url": "4-8-26.html#4-8-26-12",
+  "type": "Claim",
+  "number": "5.11",
+  "title": "",
+  "body": " Let .  Then, , . .  "
+},
+{
+  "id": "4-10-26",
+  "level": "1",
+  "url": "4-10-26.html",
+  "type": "Section",
+  "number": "6",
+  "title": "4-10-26",
+  "body": " 4-10-26  "
 }
 ]
 
