@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section xml:id="4-8-26" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>4-8-26</title>
+
+    <theorem xml:id="thm-existence-of-measure">
+        <title>The measure on <m>\mathcal M</m> exists</title>
+        <p>
+            There exists a unique set function <m>\mu: \mathcal M \rightarrow [-\infty, \infty]</m> satisfying
+            <ol>
+                <li>Nonnegativity.</li>
+                <li>Monotonicity.</li>
+                <li>Normalization.</li>
+                <li>Translation invariance.</li>
+                <li>Countable additivity.</li>
+                <li>Outer regularity. Given <m>A \in \mathcal M</m> and <m>\varepsilon > 0</m>, there is <m>\mathcal U</m> open with <m>A \subseteq \mathcal U</m> and <m>\mu(\mathcal U \backslash A) &lt; \varepsilon</m>.</li>
+            </ol>
+        </p>
+    </theorem>
+
+    <remark>
+        <p>Given <m>A \in \mathcal M</m>, <m>\mu(A) = \mu^*(A)</m>. The Legesgue measure is just the restriction of the outer measure <m>\mu^*</m> to <m>\mathcal M</m>.</p>
+    </remark>
+
+    <proposition xml:id="prop-inner-regularity">
+        <title>Inner regularity</title>
+        <p>Given <m>A \in \mathcal M</m> and <m>\varepsilon > 0</m>, there is a closed <m>F \subseteq \R</m> with <m>F \subseteq A</m> and <m>\mu(A\backslash F) &lt; \varepsilon</m>.</p>
+        <proof>
+            <p>Let <m>B = A^{\mathsf c}</m>. By outer regularity, there is open <m>\mathcal U</m> with <m>B \subseteq \mathcal U</m> and <m>\mu(\mathcal U\backslash B) &lt; \varepsilon</m>. Let <m>F = \mathcal U^{\mathsf c}</m>. Then since <m>B \subseteq \mathcal U</m>, <m>A = B^{\mathsf c} \supseteq \mathcal U^{\mathsf c} = F</m> and <m>\mathcal U \backslash B = \mathcal U \cap B^{\mathsf c} = F^{\mathsf c} \cap A = A \backslash F</m>, so <m>\mu(A \backslash F) = \mu(\mathcal U \backslash B) &lt; \varepsilon</m>.</p>
+        </proof>
+    </proposition>
+
+    <proposition xml:id="prop_measure-continuity">
+        <title>Continuity of measure</title>
+        <ol>
+            <li>Given an increasing sequence <m>A_1 \subseteq A_2 \subseteq A_3 \subseteq \cdots \in \mathcal M</m>, <m>\mu\left(\bigcap_{i = 1}^\infty B_i\right) = \lim_{i \rightarrow \infty} \mu(B_i)</m>.</li>
+            <li>Given a descending sequence <m>B_1 \supseteq B_2 \supseteq \cdots \in \mathcal M</m> with <m>\mu(B_1) &lt; \varepsilon</m>, <m>\mu\left(\bigcap_{i = 1}^\infty B_i\right) = \lim_{i \rightarrow \infty} \mu(B_i)</m>.</li>
+        </ol>
+        <proof>
+        <ol>
+            <li>Let <m>G_1 = A_1</m> and let <m>G_k = A_k \backslash A_{k - 1}</m>. Then, <m>A_k = \bigcup_{i = 1}^k G_i</m> and <m>G_i \cap G_j = \emptyset</m> for <m>i \ne j</m>. Then, <md>
+                <mrow>\mu\left(\bigcup_{j = 1}^\infty A_j\right) \amp= \mu\left(\bigcup_{j = 1}^\infty G_j\right) = \sum_{j = 1}^{\infty} \mu(G_j)</mrow>
+                <mrow>\amp= \lim_{N \rightarrow \infty} \sum_{j = 1}^{N} \mu(G_j) = \lim_{N \rightarrow \infty} \mu(A_N)</mrow>
+            </md>.</li>
+            <li>
+                <p>First note that <m>\{\mu(B_n)\}</m> is non-increasing and bounded below by <m>0</m> so <m>\lim_{n \rightarrow \infty} \mu(B_n)</m> exists.</p>
+                <p>Let <m>A_i = B_1 \backslash B_i</m>. Then, <m>A_1 \subseteq A_2 \subseteq A_3 \subseteq \cdots</m>. Also, <md>
+                    <mrow>B_1 \backslash \bigcap_{j = 1}^\infty B_j \amp= B_1 \cap \left(\bigcap_{j = 1}^\infty B_j\right)^{\mathsf c} = B_1 \cap \bigcup_{j = 1}^\infty B_j^{\mathsf c}</mrow>
+                    <mrow>\amp= \bigcup_{j = 1}^\infty\left(B_1 \cap B_j^{\mathsf c}\right) = \bigcup_{j = 1}^\infty A_j</mrow>
+                </md>.</p>
+                <p>It follows that <m>B_1 = \left(B_1 \backslash \bigcap_{j = 1}^\infty B_j\right) \sqcup \left(\bigcap_{j = 1}^\infty B_j\right)</m> so <m>\mu(B_1) = \mu\left(B_1 \backslash \bigcap_{j = 1}^\infty B_j\right) + \mu\left(\bigcap_{j = 1}^\infty B_j\right)</m> due to disjointness and measurability. Thus, <md>
+                    <mrow>\mu\left(\bigcap_{j = 1}^\infty B_j\right) \amp= \mu(B_1) - \mu\left(B_1 \backslash \bigcap_{j = 1}^\infty B_j\right)</mrow>
+                    <mrow>\amp= \mu(B_1) - \lim_{n \rightarrow \infty} \mu(A_n)</mrow>
+                    <mrow>\amp= \mu(B_1) - \lim_{n \rightarrow \infty} (\mu(B_1) - \mu(B_n))</mrow>
+                    <mrow>\amp= \lim_{n \rightarrow \infty} \mu(B_n)</mrow>
+                </md> since <m>A_n = B_1 \backslash B_n</m>, <m>B_1 = B_1 \cap B_n^{\mathsf c} \cup B_1 \cap B_n = B_1 \backslash B_n \cup B_n</m>, and <m>B_1</m> is finite.</p>
+            </li>
+        </ol>
+        </proof>
+    </proposition>
+
+    <proposition>
+        <p>For <m>A, B \in \mathcal M</m>, <m>\mu(A \cup B) = \mu(B) + \mu(A \backslash B)</m>.</p>
+        <proof>
+            <p><m>A \cup B = B \cup (A \backslash B)</m> is a disjoint union. The formula follows by finite additivity.</p>
+        </proof>
+    </proposition>
+
+    <theorem>
+    <p>
+        There is no set function <m>\lambda: P(\R) \rightarrow [0, \infty]</m> satisfying all of the following:
+        <ol>
+            <li>Translation invariance.</li>
+            <li>Monotonicity.</li>
+            <li>Normalization.</li>
+            <li>Countable additivity. If <m>\{A_i\}_{i = 1}^\infty</m> is pairwise disjoint, then <m>\lambda\left(\bigcup_{i = 1}^\infty A_i\right) = \sum_{i = 1}^{\infty} \lambda(A_i)</m>.</li>
+        </ol>
+    </p>
+    </theorem>
+
+    <example xml:id="ex-vitali-set">
+        <title>Vitali set</title>
+        <p>
+            Given <m>x, y \in \R</m>, say <m>x \sim y</m> if <m>x - y \in \Q</m>. <m>\sim</m> defines an equivalence relation on the real line and let <m>E_x = \{y \sim x\} = x + \Q</m>. By the Axiom of Choice, for each equivalence class, pick a representative <m>z_\alpha \in [0, 1]</m>.
+        </p>
+        <p>
+            Then, <m>B = \{z_\alpha\} \subseteq [0, 1]</m> is a Vitali set. Given <m>q \in \Q</m>, let <m>B_q = B + q</m>.
+        </p>
+    </example>
+
+    <observation>
+        <ol>
+            <li>If <m>y \in \R</m>, <m>y = z_\alpha + q</m> for some <m>z_\alpha</m>, so <m>y \in B_q</m>.</li>
+            <li><m>B_q \cap B_p = \emptyset</m> if <m>p \ne q \in \Q</m>.</li>
+        </ol>
+    </observation>
+
+    <lemma>
+        <p>If <m>\lambda</m> exists, then <m>\lambda(B) > 0</m>.</p>
+        <proof>
+            <p><m>\R = \bigsqcup_{q \in \Q} B_q</m>. Thus, <m>\mu(\R) = \sum_{q \in \Q} \lambda(B_q) = \sum_{q \in \Q} \lambda(B)</m>. Since <m>\lambda(\R) \ge \lambda([0, 1])</m>, <m>\lambda(B)</m> cannot be <m>0</m> so <m>\lambda(B) > 0</m>.</p>
+        </proof>
+    </lemma>
+
+    <lemma>
+    <p>If <m>\lambda</m> exists, then <m>\lambda([0, 2]) = \infty</m>.</p>
+        <proof>
+            <p><m>\{q_i\} = \Q \cap [0, 1] = Q</m>. <m>\bigcup_{i = 1}^\infty B_{q_i} \subseteq [0, 2]</m>. But, <m>\lambda\left(\bigcup_{i = 1}^\infty B_{q_i}\right) = \sum_{i = 1}^{\infty} \lambda\left(B_{q_i}\right) = \infty</m>.</p>
+            <p>On the other hand, by translation invariance, <m>\lambda([0, 2]) \le \lambda([0, 1]) + \lambda([1, 2]) = \lambda([0, 1]) + \lambda([0, 1]) = 2</m>.</p>
+        </proof>
+    </lemma>
+
+    <claim>
+        <p>Let <m>N = [0, 1] \backslash B</m>.</p>
+        <p>Then, <m>\mu^*(N) = 1</m>, <m>[0, 1] = N \sqcup B</m>. <m>\mu([0, 1]) = 1 &lt; \mu(N) + \mu(B) = 1 + \varepsilon</m>.</p>
+    </claim>
+</section>
+
